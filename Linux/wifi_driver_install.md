@@ -108,7 +108,14 @@ Ubuntu *PPA*¹에서 해당하는 최신 rtlwifi 드라이버 소스를 내려�
     (설치할 패키지 개수가 많기 때문에 아래와 같은 간단한 Shell Script를 작성해 진행하였고
     설치 순서에 따라 종속성 문제가 발생할지도 모른다고 생각되어 2~3번 추가로 실행했습니다.)
 
-    <img src="img/wifi_driver_solve_5.png" alt="shell script" width="300px">
+        #!/bin/sh
+
+        PKG_DIR='build-essential dkms linux-header' # 각 패키지를 포함한 디렉토리명
+
+        for i in ${PKG_DIR}; do
+          pkg=`find $i -name "*.deb"`
+          dpkg -i $pkg
+        done
 
 <br>
 
