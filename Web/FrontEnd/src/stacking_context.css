@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.root {
+  color: red;
+  font-weight: bold;
+}
+
+.stacking_context {
+  width: 1300px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  border: solid white;
+  border-radius: 20px;
+  margin: 10px 10px;
+  position: relative;
+  text-align: center;
+}
+
+div {
+  border: solid white;
+  border-radius: 20px;
+}
+
+.tag {
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -140%);
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* case 1 : siblings */
+.static_1 {
+  width: 90%;
+  height: 50%;
+  background-color: greenyellow;
+  margin-top: 60px;
+}
+
+.negative_1 {
+  width: 100%;
+  height: 50%;
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+  top: -300px;
+  position: relative;
+  z-index: -1;
+}
+
+.auto_1 {
+  width: 80%;
+  height: 50%;
+  background-color: skyblue;
+  top: -695px;
+  position: relative;
+}
+
+.positive_1 {
+  width: 70%;
+  height: 50%;
+  background-color: purple;
+  color: red;
+  font-weight: bold;
+  top: -400px;
+  position: relative;
+  z-index: 1;
+}
+
+/* case 2 : childs 1 */
+.static_2 {
+  width: 90%;
+  height: 50%;
+  background-color: greenyellow;
+  margin-top: 60px;
+}
+
+.negative_2 {
+  width: 112%;
+  height: 100%;
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+  top: -95px;
+  position: relative;
+  z-index: -1;
+}
+
+.auto_2 {
+  width: 90%;
+  height: 100%;
+  background-color: skyblue;
+  top: -480px;
+  position: relative;
+}
+
+.positive_2 {
+  width: 80%;
+  height: 100%;
+  background-color: purple;
+  color: red;
+  font-weight: bold;
+  top: -190px;
+  position: relative;
+  z-index: 1;
+}
+
+/* case 3 : childs 2 */
+.static_3 {
+  width: 80%;
+  height: 50%;
+  background-color: greenyellow;
+  margin-top: 110px;
+}
+
+.negative_3 {
+  width: 127%;
+  height: 100%;
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+  top: -145px;
+  position: relative;
+  z-index: -1;
+}
+
+.auto_3 {
+  width: 90%;
+  height: 100%;
+  background-color: skyblue;
+  top: -240px;
+  position: relative;
+}
+
+.positive_3 {
+  width: 92%;
+  height: 100%;
+  background-color: purple;
+  color: red;
+  font-weight: bold;
+  top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* case 4 : childs_of_siblings */
+.static_4 {
+  width: 90%;
+  height: 50%;
+  background-color: greenyellow;
+  margin-top: 60px;
+}
+
+.negative_4 {
+  width: 127%;
+  height: 100%;
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+  top: -140px;
+  position: relative;
+  z-index: -1;
+}
+
+.auto_4 {
+  width: 80%;
+  height: 50%;
+  background-color: skyblue;
+  top: -200px;
+  position: relative;
+}
+
+.positive_4 {
+  width: 80%;
+  height: 100%;
+  background-color: purple;
+  color: red;
+  font-weight: bold;
+  top: 50px;
+  position: relative;
+  z-index: 1;
+}

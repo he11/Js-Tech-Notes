@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stacking_context.css">
+    <title>Stacking Context</title>
+</head>
+<body>
+    <section class="stacking_context">
+        <article class="case_1 siblings">
+            <span class="root">Root</span>
+            <div class="static_1"><span>Static</span></div>
+            <div class="negative_1"><span>Negative</span></div>
+            <div class="positive_1"><span>Positive</span></div>
+            <div class="auto_1"><span>Auto</span></div>
+            <span class="tag">[1] 생성 요소 : 형제 요소</span>
+        </article>
+
+        <article class="case_2 childs_1">
+            <span class="root">Root</span>
+            <div class="static_2">
+                <span>Static</span>
+                <div class="negative_2"><span>Negative</span></div>
+                <div class="positive_2"><span>Positive</span></div>
+                <div class="auto_2"><span>Auto</span></div>
+            </div>
+            <span class="tag">[2] 생성 요소 : 자식 요소 (1)</span>
+        </article>
+
+        <article class="case_3 childs_2">
+            <span class="root">Root</span>
+            <div class="static_3">
+                <span>Static</span>
+                <div class="negative_3">
+                    <span>Negative</span>
+                    <div class="positive_3"><span>Positive</span></div>
+                </div>
+                <div class="auto_3"><span>Auto</span></div>
+            </div>
+            <span class="tag">[3] 생성 요소 : 자식 요소 (2)</span>
+        </article>
+
+        <article class="case_4 childs_of_siblings">
+            <span class="root">Root</span>
+            <div class="static_4">
+                <span>Static</span>
+                <div class="positive_4"><span>Positive</span></div>
+            </div>
+            <div class="auto_4">
+                <span>Auto</span>
+                <div class="negative_4"><span>Negative</span></div>
+            </div>
+            <span class="tag">[4] 생성 요소 : 형제의 자식 요소</span>
+        </article>
+    </section>
+</body>
+</html>
